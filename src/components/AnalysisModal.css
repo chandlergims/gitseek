@@ -1,0 +1,167 @@
+.analysis-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.analysis-modal {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  border-radius: 16px;
+  padding: 2.5rem 2rem 2rem;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.modal-content {
+  overflow: hidden;
+  max-height: calc(90vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.analysis-text {
+  overflow-y: auto;
+  padding: 1.5rem;
+  margin: 0 -0.5rem;
+  max-height: calc(90vh - 14rem);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.analysis-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.analysis-text::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  margin: 0.5rem 0;
+}
+
+.analysis-text::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.analysis-text::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.verdict {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-right: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.verdict.larp {
+  background: linear-gradient(135deg, #ff4444, #ff6b6b);
+  color: white;
+}
+
+.verdict.genuine {
+  background: linear-gradient(135deg, #00c851, #00e676);
+  color: white;
+}
+
+.confidence {
+  display: inline-block;
+  color: #aaa;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.analysis-text {
+  color: #fff;
+  line-height: 1.7;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  font-family: 'Fira Code', monospace;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #fff;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

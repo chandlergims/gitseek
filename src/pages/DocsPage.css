@@ -1,0 +1,74 @@
+.docs {
+  flex: 1;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.docs-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.docs-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.docs-header p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.docs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.docs-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.docs-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a192b;
+}
+
+.docs-section p {
+  margin-bottom: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.docs-section ul,
+.docs-section ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.docs-section li {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .docs {
+    padding: 2rem 1rem;
+  }
+
+  .docs-header h1 {
+    font-size: 2rem;
+  }
+
+  .docs-header p {
+    font-size: 1rem;
+  }
+}

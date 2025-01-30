@@ -1,0 +1,159 @@
+.home {
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #1a192b, #2a293b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  color: #1a192b;
+}
+
+.button:hover {
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: #1a192b;
+  color: white;
+  border: none;
+}
+
+.button.primary:hover {
+  background: #2a293b;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: #1a192b;
+}
+
+.api-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.api-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.api-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f8fafc;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a192b;
+}
+
+.code-block {
+  margin: 0;
+  padding: 1.75rem;
+  background: #13141f;
+  color: #e2e8f0;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.code-block code {
+  display: block;
+  white-space: pre;
+}
+
+/* Syntax highlighting */
+.code-block .comment {
+  color: #94a3b8;
+}
+
+.code-block .keyword {
+  color: #60a5fa;
+}
+
+.code-block .string {
+  color: #34d399;
+}
+
+.code-block .type {
+  color: #f472b6;
+}
+
+.code-block .punctuation {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .api-cards {
+    grid-template-columns: 1fr;
+  }
+}

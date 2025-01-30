@@ -1,0 +1,267 @@
+.app-page {
+  display: flex;
+  height: calc(100vh - 70px);
+  background: #f8f9fa;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 1rem;
+  background: white;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.dndnode {
+  padding: 1rem;
+  border: 2px solid #1a192b;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  cursor: grab;
+  background: white;
+  transition: all 0.2s;
+  text-align: center;
+  font-weight: 500;
+}
+
+.dndnode:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.flow-container {
+  flex: 1;
+  height: 100%;
+}
+
+.flow-node {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  width: 320px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flow-node:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.node-header {
+  text-align: left;
+  margin: -1.5rem -1.5rem 1.25rem -1.5rem;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 12px 12px 0 0;
+}
+
+.node-header h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.node-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.node-help {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+  padding: 0 0.25rem;
+}
+
+.flow-node input,
+.flow-node textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+  color: #1e293b;
+}
+
+.flow-node input:focus,
+.flow-node textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.flow-node input::placeholder {
+  color: #94a3b8;
+}
+
+.flow-node textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.analysis-section {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.analyze-button {
+  padding: 1rem;
+  background: #1a192b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: #2a293b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.analyze-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  padding: 0.8rem;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  color: #c00;
+  font-size: 0.9rem;
+}
+
+.analysis-result {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.analysis-result.is-larp {
+  border-color: #c00;
+}
+
+.analysis-result.is-genuine {
+  border-color: #0c0;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.result-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.confidence {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.result-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.is-larp .result-status {
+  background: #fee;
+  color: #c00;
+}
+
+.is-genuine .result-status {
+  background: #efe;
+  color: #0c0;
+}
+
+.result-explanation {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+  white-space: pre-wrap;
+}
+
+.react-flow__node {
+  width: auto !important;
+  padding: 0 !important;
+}
+
+.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  background: #1a192b !important;
+  border: 2px solid white !important;
+  transition: all 0.2s !important;
+}
+
+.react-flow__handle:hover {
+  background: #2a293b !important;
+  transform: scale(1.2) !important;
+}
+
+.react-flow__handle-left {
+  left: -5px !important;
+}
+
+.react-flow__handle-right {
+  right: -5px !important;
+}
+
+.react-flow__edge-path {
+  stroke: #1a192b !important;
+  stroke-width: 2 !important;
+}
+
+.react-flow__controls {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.react-flow__controls button {
+  background: white !important;
+  border-bottom: 1px solid #eee !important;
+  box-shadow: none !important;
+}
+
+.react-flow__controls button:hover {
+  background: #f5f5f5 !important;
+}
+
+.react-flow__background {
+  background-color: #f8f9fa !important;
+}
